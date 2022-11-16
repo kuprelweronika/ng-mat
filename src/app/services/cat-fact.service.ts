@@ -9,7 +9,7 @@ export class CatFactService {
   }
 
   getAll(): Observable<CatFactsModel[]> {
-    return this._httpClient.get<CatFactsModel[]>('https://catfact.ninja/fact.json');
+    return this._httpClient.get<CatFactsModel[]>('https://catfact.ninja/fact');
 
   }
 }
