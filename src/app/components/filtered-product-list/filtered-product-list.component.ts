@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Observable, Subject, combineLatest } from 'rxjs';
+import {Observable, Subject, combineLatest, of} from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { ProductModel } from '../../models/product.model';
 import { CategoriesService } from '../../services/categories.service';
@@ -35,6 +35,6 @@ export class FilteredProductListComponent {
   }
 
   selectCategory(category: string): void {
-    this._categorySubject.next(category);
+    this._categorySubject.next(category)
   }
 }

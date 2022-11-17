@@ -9,6 +9,7 @@ import { FilteredProductListComponent } from './components/filtered-product-list
 import { SortedProductListComponent } from './components/sorted-product-list/sorted-product-list.component';
 import { GenderComponent } from './components/gender/gender.component';
 import { SortingEmployeeComponent } from './components/sorting-employee/sorting-employee.component';
+import { FilteringEmployeesComponent } from './components/filtering-employees/filtering-employees.component';
 import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CatFactsComponentModule } from './components/cat-facts/cat-facts.component-module';
@@ -26,6 +27,7 @@ import { CategoriesServiceModule } from './services/categories.service-module';
 import { SortedProductListComponentModule } from './components/sorted-product-list/sorted-product-list.component-module';
 import { SortingEmployeeComponentModule } from './components/sorting-employee/sorting-employee.component-module';
 import { EmployeeServiceModule } from './services/employee.service-module';
+import { FilteringEmployeesComponentModule } from './components/filtering-employees/filtering-employees.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -37,8 +39,9 @@ import { EmployeeServiceModule } from './services/employee.service-module';
     { path: 'products/:category', component: FilteredProductListComponent },
     { path: 'products', component: SortedProductListComponent },
     { path: 'gender/:name', component: GenderComponent },
-    { path: 'sort-employee', component: SortingEmployeeComponent }
-  ]), ProductDetailComponentModule, ProductServiceModule, CatFactsComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, GenderComponentModule, GenderServiceModule, FilteredProductListComponentModule, CategoriesServiceModule, SortedProductListComponentModule, SortingEmployeeComponentModule, EmployeeServiceModule],
+    { path: 'sort-employee', component: SortingEmployeeComponent },
+    { path: 'filtered-employees', component: FilteringEmployeesComponent }
+  ]), ProductDetailComponentModule, ProductServiceModule, CatFactsComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, GenderComponentModule, GenderServiceModule, FilteredProductListComponentModule, CategoriesServiceModule, SortedProductListComponentModule, SortingEmployeeComponentModule, EmployeeServiceModule, FilteringEmployeesComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

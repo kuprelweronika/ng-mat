@@ -21,6 +21,7 @@ export class EmployeeService {
             img: employeeResponse.employee_image,
             salary: employeeResponse.employee_salary,
             mail: employeeResponse.employee_name + '@lowgular.io',
+            age: employeeResponse.employee_age,
           }
         })
       }))
