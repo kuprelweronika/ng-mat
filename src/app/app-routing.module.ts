@@ -32,7 +32,7 @@ import { SortedProductListComponentModule } from './components/sorted-product-li
     { path: 'cart/:id', component: CartComponent },
     { path: 'user/:id', component: UserComponent },
     { path: 'products/:category', component: FilteredProductListComponent },
-   // { path: 'products', component: SortedProductListComponent },
+   { path: 'products', component: SortedProductListComponent },
     { path: 'gender/:name', component: GenderComponent },
   ]),
     ProductDetailComponentModule, ProductServiceModule, CatFactsComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, GenderComponentModule, GenderServiceModule, FilteredProductListComponentModule, CategoriesServiceModule, SortedProductListComponentModule],
