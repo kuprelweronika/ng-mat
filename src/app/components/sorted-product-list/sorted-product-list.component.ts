@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 import {BehaviorSubject, Observable, of} from 'rxjs';
 import { ProductModel } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
-import { combineLatest } from 'rxjs';
+import {combineLatest} from "rxjs";
 import {map} from "rxjs/operators";
 
 @Component({
@@ -16,7 +16,7 @@ export class SortedProductListComponent {
   public order$: Observable<string> = this._orderSubject.asObservable();
   readonly products$: Observable<ProductModel[]> = combineLatest([
     this._productService.getAll(),
-     this.order$
+    this.order$
   ]).pipe(
     map(([products, order]: [ProductModel[], string]) => {
     return products.sort((a, b) => {
@@ -24,6 +24,7 @@ export class SortedProductListComponent {
       if (a.price < b.price) return order === 'asc' ? -1 : 1;
       return 0;
     })}))
+
   public orders: Observable<string[]>=of(['asc','desc'])
   constructor(private _productService: ProductService) {
   }
