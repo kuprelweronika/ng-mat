@@ -13,7 +13,7 @@ export class CatFactsComponent {
   constructor(private _catFactService: CatFactService) {
 
   }
-  readonly data: Observable<CatFactsModel[]> = this._catFactService.getAll();
+  readonly data$: Observable<any> = this._catFactService.getAll();
 
 
 

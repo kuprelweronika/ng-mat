@@ -1,4 +1,4 @@
 export interface CatFactsModel {
-  readonly fact: string;
-  readonly length: number;
+   fact: string;
+   length: number;
 }

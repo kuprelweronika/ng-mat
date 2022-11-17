@@ -11,11 +11,5 @@ import {CatFactsModel} from "../models/cat-facts.model";
   exports: []
 })
 export class CatFactServiceModule {
-  constructor(private _httpClient: HttpClient) {
-  }
 
-  getAll(): Observable<CatFactsModel[]> {
-    return this._httpClient.get<CatFactsModel[]>('https://catfact.ninja/fact');
-
-  }
 }
