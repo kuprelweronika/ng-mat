@@ -3,7 +3,6 @@ import {combineLatest, Observable, of, Subject} from "rxjs";
 import {map} from "rxjs/operators";
 import {EmployeeModel} from "../../models/employee.model";
 import {EmployeeService} from "../../services/employee.service";
-import {ProductModel} from "../../models/product.model";
 
 @Component({
   selector: 'app-filtering-employees',
