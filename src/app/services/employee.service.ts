@@ -15,4 +15,6 @@ export class EmployeeService {
   getAll(): Observable<EmployeeModel[]> {
     return this._httpClient.get<EmployeeModel[]>('ttps://dummy.restapiexample.com/api/v1/employees')
   }
+
+
 }

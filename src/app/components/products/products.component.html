@@ -11,16 +11,16 @@
 <!--</mat-card>-->
 
 <mat-grid-list cols="2" rowHeight="1:2">
-  <mat-grid-tile>
-    <mat-list role="list">
-      <mat-list-item *ngFor="let item of list$ | async" role="listitem">{{item.title}}
-        <button (click)="selectProduct(item.id)" color="primary" mat-button>Show Details</button>
+    <mat-grid-tile>
+        <mat-list role="list">
+            <mat-list-item *ngFor="let item of list$ | async" role="listitem">{{item.title}}
+                <button (click)="selectProduct(item.id)" color="primary" mat-button>Show Details</button>
 
-      </mat-list-item>
-    </mat-list>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <ng-container *ngIf="details$ | async as item"> {{item.title}} {{item.price}}</ng-container>
+            </mat-list-item>
+        </mat-list>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <ng-container *ngFor="details$ | async as item"> {{item}} {{item.price}}</ng-container>
 
-  </mat-grid-tile>
+    </mat-grid-tile>
 </mat-grid-list>

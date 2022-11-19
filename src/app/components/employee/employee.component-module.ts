@@ -5,6 +5,7 @@ import {MatListModule} from '@angular/material/list';
 import {EmployeeServiceModule} from '../../services/employee.service-module';
 import {EmployeeListServiceModule} from '../../services/employee-list.service-module';
 import {EmployeeComponent} from './employee.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import {EmployeeComponent} from './employee.component';
     MatListModule,
     EmployeeServiceModule,
     EmployeeListServiceModule,
-    CommonModule
+    CommonModule,
+    MatGridListModule
   ],
   declarations: [EmployeeComponent],
   providers: [],
