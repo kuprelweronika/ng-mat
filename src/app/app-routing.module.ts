@@ -15,6 +15,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { BinanceComponent } from './components/binance/binance.component';
 import { ProductsForEmptyComponent } from './components/products-for-empty/products-for-empty.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CatFactsComponentModule } from './components/cat-facts/cat-facts.component-module';
@@ -40,6 +41,7 @@ import { EmployeeComponentModule } from './components/employee/employee.componen
 import { BinanceComponentModule } from './components/binance/binance.component-module';
 import { BinanceServiceModule } from './services/binance.service-module';
 import { ProductsForEmptyComponentModule } from './components/products-for-empty/products-for-empty.component-module';
+import { CategoriesComponentModule } from './components/categories/categories.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -57,8 +59,9 @@ import { ProductsForEmptyComponentModule } from './components/products-for-empty
     { path: 'product', component: ProductsComponent },
     { path: 'employee', component: EmployeeComponent },
     { path: 'crypto-master-details', component: BinanceComponent },
-    { path: 'productsEmpty', component: ProductsForEmptyComponent }
-  ]), ProductDetailComponentModule, ProductServiceModule, CatFactsComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, GenderComponentModule, GenderServiceModule, FilteredProductListComponentModule, CategoriesServiceModule, SortedProductListComponentModule, SortingEmployeeComponentModule, EmployeeServiceModule, FilteringEmployeesComponentModule, BeersComponentModule, BeersServiceModule, ProductsComponentModule, EmployeeComponentModule, BinanceComponentModule, BinanceServiceModule, ProductsForEmptyComponentModule],
+    { path: 'productsEmpty', component: ProductsForEmptyComponent },
+    { path: 'categories', component: CategoriesComponent }
+  ]), ProductDetailComponentModule, ProductServiceModule, CatFactsComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, GenderComponentModule, GenderServiceModule, FilteredProductListComponentModule, CategoriesServiceModule, SortedProductListComponentModule, SortingEmployeeComponentModule, EmployeeServiceModule, FilteringEmployeesComponentModule, BeersComponentModule, BeersServiceModule, ProductsComponentModule, EmployeeComponentModule, BinanceComponentModule, BinanceServiceModule, ProductsForEmptyComponentModule, CategoriesComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
