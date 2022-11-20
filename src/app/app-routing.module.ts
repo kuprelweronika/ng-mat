@@ -14,6 +14,7 @@ import { BeersComponent } from './components/beers/beers.component';
 import { ProductsComponent } from './components/products/products.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { BinanceComponent } from './components/binance/binance.component';
+import { ProductsForEmptyComponent } from './components/products-for-empty/products-for-empty.component';
 import { ProductDetailComponentModule } from './components/product-detail/product-detail.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CatFactsComponentModule } from './components/cat-facts/cat-facts.component-module';
@@ -38,6 +39,7 @@ import { ProductsComponentModule } from './components/products/products.componen
 import { EmployeeComponentModule } from './components/employee/employee.component-module';
 import { BinanceComponentModule } from './components/binance/binance.component-module';
 import { BinanceServiceModule } from './services/binance.service-module';
+import { ProductsForEmptyComponentModule } from './components/products-for-empty/products-for-empty.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([
@@ -54,8 +56,9 @@ import { BinanceServiceModule } from './services/binance.service-module';
     { path: 'beers', component: BeersComponent },
     { path: 'product', component: ProductsComponent },
     { path: 'employee', component: EmployeeComponent },
-    { path: 'crypto-master-details', component: BinanceComponent }
-  ]), ProductDetailComponentModule, ProductServiceModule, CatFactsComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, GenderComponentModule, GenderServiceModule, FilteredProductListComponentModule, CategoriesServiceModule, SortedProductListComponentModule, SortingEmployeeComponentModule, EmployeeServiceModule, FilteringEmployeesComponentModule, BeersComponentModule, BeersServiceModule, ProductsComponentModule, EmployeeComponentModule, BinanceComponentModule, BinanceServiceModule],
+    { path: 'crypto-master-details', component: BinanceComponent },
+    { path: 'productsEmpty', component: ProductsForEmptyComponent }
+  ]), ProductDetailComponentModule, ProductServiceModule, CatFactsComponentModule, CatFactServiceModule, AgePredictionComponentModule, AgePredictionServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, GenderComponentModule, GenderServiceModule, FilteredProductListComponentModule, CategoriesServiceModule, SortedProductListComponentModule, SortingEmployeeComponentModule, EmployeeServiceModule, FilteringEmployeesComponentModule, BeersComponentModule, BeersServiceModule, ProductsComponentModule, EmployeeComponentModule, BinanceComponentModule, BinanceServiceModule, ProductsForEmptyComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
